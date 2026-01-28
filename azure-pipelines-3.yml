@@ -18,7 +18,7 @@ stages:
         echo "Running unit tests..."
       displayName: 'Run unit tests'
 
-      - stage: Test
+- stage: Test
   displayName: 'Test Stage'
   dependsOn: Build
   isSkippable: false
@@ -30,7 +30,7 @@ stages:
         echo "Running unit tests..."
       displayName: 'Run unit tests'
 
-      - stage: DeployToStaging
+- stage: DeployToStaging
   displayName: 'Deploy to Staging'
   dependsOn: Test
   jobs:
